@@ -20,10 +20,7 @@ PASTA_SAIDA = "arquivos"
 os.makedirs(PASTA_SAIDA, exist_ok=True)
 
 
-class PedidoPeticao(BaseModel):
-    tipo_peticao: str
-    nome_cliente: str
-    substituicoes: Dict[str, str]
+from pydantic import BaseModel, Field
 
 
 def localizar_modelo(tipo: str):
