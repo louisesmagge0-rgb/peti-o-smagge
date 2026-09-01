@@ -8,7 +8,12 @@ import uuid
 
 app = FastAPI(
     title="SMAGGE - Gerador de Petições",
-    version="1.0.0"
+    version="1.0.0",
+    servers=[
+        {
+            "url": "https://peti-o-smagge.onrender.com"
+        }
+    ]
 )
 
 PASTA_SAIDA = "arquivos"
